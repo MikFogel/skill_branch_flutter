@@ -115,7 +115,7 @@ class User {
     return email;
   }
 
-  String get name => _firstName.capitalize() + " " + _lastName.capitalize();
+  String get name => _firstName.capitalize(_firstName) + " " + _lastName.capitalize(_lastName);
 
   @override
   bool operator == (Object object) {

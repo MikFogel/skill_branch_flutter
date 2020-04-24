@@ -6,7 +6,7 @@ enum LoginType {
 }
 
 
-class User {
+class User with UserUtils{
   String email;
   String phone;
 
@@ -115,7 +115,7 @@ class User {
     return email;
   }
 
-  String get name => _firstName.capitalize(_firstName) + " " + _lastName.capitalize(_lastName);
+  String get name => this.capitalize(_firstName) + " " + this.capitalize(_lastName);
 
   @override
   bool operator == (Object object) {
